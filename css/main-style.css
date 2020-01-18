@@ -2251,7 +2251,7 @@ header .logo a {
  */
 #contact {
 	background: #151515;
-	padding-top: 12rem;
+	padding-top: 6rem;
 	padding-bottom: 7.2rem;
 }
 #contact .section-intro h1 {
@@ -2413,6 +2413,7 @@ header .logo a {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
+  padding-bottom: 4rem;
 }
 .contact-info .collapse {
 	padding: 0;
@@ -2597,3 +2598,18 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+#nav-bar {
+    padding-top: 2rem;
+    font-family: "poppins-bold";
+    height: 60px;
+}
+
+#nav-bar li {
+	list-style: none;
+}
+
+#nav-bar a, #nav-bar a:visited, #nav-bar a:hover, #nav-bar a:focus {
+  color: #32A852;
+  float: left;
+  margin-left: 4rem;
+}
