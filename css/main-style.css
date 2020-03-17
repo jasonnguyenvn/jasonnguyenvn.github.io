@@ -70,7 +70,6 @@ html, body {
 	height: 100%;
 }
 body {
-	background: #151515;
 	font-family: "lora-regular", serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
@@ -1518,7 +1517,6 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
 	margin-bottom: 3.6rem;
 }
 .about-content h3 {
@@ -2602,6 +2600,8 @@ footer .copyright span:last-child::after {
     padding-top: 2rem;
     font-family: "poppins-bold";
     height: 60px;
+
+	background: #151515;
 }
 
 #nav-bar li {
@@ -2612,4 +2612,11 @@ footer .copyright span:last-child::after {
   color: #32A852;
   float: left;
   margin-left: 4rem;
+}
+
+
+@media screen and (max-width:600px) {
+#nav-bar {
+  font-size: 10px;
+}
 }
