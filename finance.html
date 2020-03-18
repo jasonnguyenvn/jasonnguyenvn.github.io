@@ -12,6 +12,8 @@
     <meta name="author" content="Jason Steve Nguyen" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
+    <meta name="og:image" content="images/bg.jpg" />
+
     <!-- mobile specific metas
    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -92,43 +94,62 @@
     </section>
     <!-- about section
    ================================================== -->
-    <section id="about" style="min-height: 2000px;width:100%;margin-top: -100px;">
+    <section id="about" style="min-height: 2000px;width:100%;margin-top: -140px;">
       <div style="width:95%;margin: auto;">
         <h5>My Watch List</h5>
 
-        <div class=" col-twelve">
-          <div class="col-six mob-full">
-            <div class="col-six mob-full">
-              <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
-              <div id="fan-quote-687"></div>
-              <script type="text/javascript">
-                new FireAnt.QuoteWidget({
-                  container_id: 'fan-quote-687',
-                  symbols: 'FPT',
-                  locale: 'vi',
-                  price_line_color: '#71BDDF',
-                  grid_color: '#999999',
-                  label_color: '#999999',
-                  width: '100%',
-                  height: '100px'
-                });
-              </script>
+        <div class=" col-twelve" style="padding:0">
+          <div class="col-six mob-full" style="padding:0">
+            <div class="col-twelve mob-full">
+              <div class="col-six mob-full">
+                <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
+                <div id="fan-quote-687"></div>
+                <script type="text/javascript">
+                  new FireAnt.QuoteWidget({
+                    container_id: 'fan-quote-687',
+                    symbols: 'FPT',
+                    locale: 'vi',
+                    price_line_color: '#71BDDF',
+                    grid_color: '#999999',
+                    label_color: '#999999',
+                    width: '100%',
+                    height: '100px'
+                  });
+                </script>
+              </div>
+              <div class="col-six mob-full">
+                <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
+                <div id="fan-quote-124"></div>
+                <script type="text/javascript">
+                  new FireAnt.QuoteWidget({
+                    container_id: 'fan-quote-124',
+                    symbols: 'REE',
+                    locale: 'vi',
+                    price_line_color: '#71BDDF',
+                    grid_color: '#999999',
+                    label_color: '#999999',
+                    width: '100%',
+                    height: '100px'
+                  });
+                </script>
+              </div>
             </div>
-            <div class="col-six mob-full">
-              <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
-              <div id="fan-quote-124"></div>
-              <script type="text/javascript">
-                new FireAnt.QuoteWidget({
-                  container_id: 'fan-quote-124',
-                  symbols: 'REE',
-                  locale: 'vi',
-                  price_line_color: '#71BDDF',
-                  grid_color: '#999999',
-                  label_color: '#999999',
-                  width: '100%',
-                  height: '100px'
-                });
-              </script>
+            <div
+              class="col-twelve mob-full"
+              style="padding:0;word-wrap: break-word; font-family: roboto;"
+            >
+              <h4>Welcome to my trading view!</h4>
+              <span>
+                This is the place I share my point of view in investing.<br />
+
+                Of course, all of them are my own individual perspective. You may agree or disagree
+                with this. However, I make NO investment recommendation. <br />
+
+                I will add some idea in this page and release the feature that you can post comments
+                here. I hope we can learn each others.<br />
+
+                Happy Trading!
+              </span>
             </div>
           </div>
           <div class="col-six mob-full" style="min-height: 700px;">
@@ -165,24 +186,25 @@
             <!-- TradingView Widget END -->
           </div>
         </div>
-      </div>
-      <div class=" col-twelve" style="margin-top: 40px;">
-        <h5>Vietnam Stock Market Overview</h5>
 
-        <div>
-          <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
-          <div id="fan-quote-481"></div>
-          <script type="text/javascript">
-            new FireAnt.MarketsWidget({
-              container_id: 'fan-quote-481',
-              locale: 'vi',
-              price_line_color: '#71BDDF',
-              grid_color: '#999999',
-              label_color: '#999999',
-              width: '100%',
-              height: '250px'
-            });
-          </script>
+        <div class=" col-twelve" style="margin-top: 40px;">
+          <h5>Vietnam Stock Market Overview</h5>
+
+          <div>
+            <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
+            <div id="fan-quote-481"></div>
+            <script type="text/javascript">
+              new FireAnt.MarketsWidget({
+                container_id: 'fan-quote-481',
+                locale: 'vi',
+                price_line_color: '#71BDDF',
+                grid_color: '#999999',
+                label_color: '#999999',
+                width: '100%',
+                height: '250px'
+              });
+            </script>
+          </div>
         </div>
       </div>
 
