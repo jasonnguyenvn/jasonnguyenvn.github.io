@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <title>Jason Finance</title>
     <meta name="author" content="Jason Steve Nguyen" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
     <!-- mobile specific metas
    ================================================== -->
@@ -52,12 +52,11 @@
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget">
           <div class="tradingview-widget-copyright">
-          <a href="https://www.tradingview.com" rel="noopener" target="_blank"
-            ><span class="blue-text">Quotes</span></a
-          >
-          by TradingView
-        </div>
-        
+            <a href="https://www.tradingview.com" rel="noopener" target="_blank"
+              ><span class="blue-text">Quotes</span></a
+            >
+            by TradingView
+          </div>
         </div>
         <script
           type="text/javascript"
@@ -132,9 +131,38 @@
                 </script>
               </div>
             </div>
-            <!-- <div class="col-twelve">
-              <iframe src="http://sjc.com.vn/giavang/textContent.php" width="100%" height="400px" >Loading</iframe>
-            </div> -->
+            <div class="col-twelve" style="min-height: 700px;">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container" style="min-height: 700px;">
+                <div id="tradingview_10935" style="height: 600px;"></div>
+                <div class="tradingview-widget-copyright">
+                  <a
+                    href="https://www.tradingview.com/symbols/TVC-GOLD/"
+                    rel="noopener"
+                    target="_blank"
+                    ><span class="blue-text">GOLD Chart</span></a
+                  >
+                  by TradingView
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                  new TradingView.widget({
+                    autosize: true,
+                    symbol: 'TVC:GOLD',
+                    interval: '60',
+                    timezone: 'Etc/UTC',
+                    theme: 'light',
+                    style: '9',
+                    locale: 'en',
+                    toolbar_bg: '#f1f3f6',
+                    enable_publishing: false,
+                    studies: ['RSI@tv-basicstudies', 'MACD@tv-basicstudies'],
+                    container_id: 'tradingview_10935'
+                  });
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
           </div>
         </div>
         <div class=" col-twelve" style="margin-top: 40px;">
@@ -184,7 +212,7 @@
       </div>
     </section>
     <!-- /process-->
-    
+
     <!-- footer
    ================================================== -->
 
