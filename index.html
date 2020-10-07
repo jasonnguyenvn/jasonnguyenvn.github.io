@@ -102,10 +102,13 @@
 	  <script>
 		    let headers = new Headers();
 
-  headers.append('Accept', 'application/xml');
+  headers.append('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9');
 
   headers.append('Access-Control-Allow-Origin', 'https://www.jasonnguyenvn.com/');
   headers.append('Access-Control-Allow-Credentials', 'true');
+		  
+ headers.append('accept-encoding', 'gzip, deflate, br');
+headers.append('cache-control', 'no-cache');
 		  
 fetch('https://blog.jasonnguyenvn.com/feed/', {
 	method: 'GET',
