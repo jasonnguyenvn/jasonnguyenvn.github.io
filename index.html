@@ -99,47 +99,6 @@
       </div>
 	    <div id="blog-feeds" class="row about-content"></div>
     </section>
-	  <script>
-		    let headers = new Headers();
-
-  headers.append('Accept', 'application/rss+xml; charset=UTF-8');
-headers.append('Access-Control-Allow-Origin', 'https://blog.jasonnguyenvn.com');
-headers.append('Origin', 'https://wwww.jasonnguyenvn.com');
-		  
- headers.append('accept-encoding', 'gzip, deflate, br');
-headers.append('cache-control', 'no-cache');
-		  headers.append('Sec-Fetch-Site', 'cross-site');
-		  headers.append('Sec-Fetch-Dest', 'document');
-fetch('https://blog.jasonnguyenvn.com/feed/?t=00', {
-	method: 'GET',mode: 'cors',
-      credentials: 'include',
-      headers
-    })
-  .then(response => { 
-	return response.text();
-		    })
-  .then(str => {
- return new window.DOMParser().parseFromString(str, "text/xml");	
-})
-  .then(data => {
-    console.log(data);
-    const items = data.querySelectorAll("item");
-    let html = ``;
-    items.forEach(el => {
-      html += `
-        <article>
-          <img src="${el.querySelector("link").innerHTML}/image/large.png" alt="">
-          <h2>
-            <a href="${el.querySelector("link").innerHTML}" target="_blank" rel="noopener">
-              ${el.querySelector("title").innerHTML}
-            </a>
-          </h2>
-        </article>
-      `;
-    });
-   document.getElementById("blog-feeds").insertAdjacentHTML("afterBegin", html);
-  });
-	  </script>
     <!-- /process-->
 
     <!-- footer
