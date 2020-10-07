@@ -99,7 +99,7 @@
       </div>
 	    <div id="blog-feeds" class="row about-content"></div>
     </section>
-	  <script
+	  <script>
 		    let headers = new Headers();
 
   headers.append('Content-Type', 'application/json');
@@ -112,10 +112,9 @@
 
 		  
 fetch('https://blog.jasonnguyenvn.com/feed/', {
-      //mode: 'no-cors',
       credentials: 'include',
       method: 'POST',
-      headers: headers
+      header
     })
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
