@@ -99,38 +99,44 @@
       </div>
 	    <div id="blog-feeds" class="row about-content"></div>
     </section>
-	  <script>$( document ).ready(function() {
-$.ajax('https://blog.jasonnguyenvn.com/feed/', {
-  accepts: {
-    xml: "application/rss+xml"
-  },
+	  <script
+		    let headers = new Headers();
 
-  dataType: "xml",
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
 
-  success: function(data) {
-    $(data)
-      .find("item")
-      .each(function() {
-        const el = $(this);
+  headers.append('Access-Control-Allow-Origin', 'https://www.jasonnguyenvn.com/');
+  headers.append('Access-Control-Allow-Credentials', 'true');
 
-        const template = `
-          <article>
-            <img src="${el.find("link").text()}/image/large.png" alt="">
-            <h2>
-              <a href="${el
-                .find("link")
-                .text()}" target="_blank" rel="noopener">
-                ${el.find("title").text()}
-              </a>
-            </h2>
-          </article>
-        `;
+  headers.append('GET');
 
-        document.body.insertAdjacentHTML("beforeend", template);
-      });
-  }
-});  
-		  });
+		  
+fetch('https://blog.jasonnguyenvn.com/feed/', {
+      //mode: 'no-cors',
+      credentials: 'include',
+      method: 'POST',
+      headers: headers
+    })
+  .then(response => response.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then(data => {
+    console.log(data);
+    const items = data.querySelectorAll("item");
+    let html = ``;
+    items.forEach(el => {
+      html += `
+        <article>
+          <img src="${el.querySelector("link").innerHTML}/image/large.png" alt="">
+          <h2>
+            <a href="${el.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+              ${el.querySelector("title").innerHTML}
+            </a>
+          </h2>
+        </article>
+      `;
+    });
+    document.body.insertAdjacentHTML("blog-feeds", html);
+  });
 	  </script>
     <!-- /process-->
 
