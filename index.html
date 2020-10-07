@@ -111,7 +111,7 @@
 fetch('https://blog.jasonnguyenvn.com/feed/', {
       credentials: 'include',
       method: 'POST',
-      header
+      headers
     })
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
